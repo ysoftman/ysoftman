@@ -1,4 +1,6 @@
-### Hi there 👋
+# sentimental progrmmmer~ 🤔
+
+"Not Everything Does, Not Everythin Has To."  - Ancient One
 
 <!--
 **ysoftman/ysoftman** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
