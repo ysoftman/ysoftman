@@ -1,4 +1,4 @@
-# sentimental progrmmmer~ 🤔
+# sentimental programmer~ 🤔
 
 "Not Everything Does, Not Everything Has To."  - Ancient One
 
