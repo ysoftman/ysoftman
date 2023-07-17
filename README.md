@@ -2,14 +2,15 @@
 
 "Not Everything Does, Not Everything Has To." - Ancient One
 
-<!-- https://github.com/alexandresanlim/Badges4-README.md-Profile -->
+<!-- https://github.com/Ileriayo/markdown-badges -->
+<!-- https://github.com/antonkomarev/github-profile-views-counter -->
 <a href="https://yoonbh2714.blogspot.com/" target="_blank"><img src="https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white" /></a>
-<a href="https://github.com/ysoftman" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://ysoftman.github.io" target="_blank"><img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white" /></a>
-<a href="https://bitbucket.org/ysoftman" target="_blank"><img src="https://img.shields.io/badge/Bitbucket-0747a6?style=for-the-badge&logo=bitbucket&logoColor=white" /></a>
-<a href="https://leetcode.com/ysoftman" target="_blank"><img src="https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" /></a>
-<a href="https://www.linkedin.com/in/byounghoon-yoon-a98515b5" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-![image](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fysoftman1212%2Fhit-counter)
+<a href="https://github.com/ysoftman" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://ysoftman.github.io" target="_blank"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://bitbucket.org/ysoftman" target="_blank"><img src="https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white" /></a>
+<a href="https://leetcode.com/ysoftman" target="_blank"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
+<a href="https://www.linkedin.com/in/byounghoon-yoon-a98515b5" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+![](https://komarev.com/ghpvc/?username=your-github-username&style=for-the-badge	)
 
 <a href="https://github.com/ysoftman/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=ysoftman&show_icons=true&theme=one_dark_pro" />
