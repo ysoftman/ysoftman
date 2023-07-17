@@ -10,7 +10,7 @@
 <a href="https://bitbucket.org/ysoftman" target="_blank"><img src="https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white" /></a>
 <a href="https://leetcode.com/ysoftman" target="_blank"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" /></a>
 <a href="https://www.linkedin.com/in/byounghoon-yoon-a98515b5" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-![](https://komarev.com/ghpvc/?username=your-github-username&style=for-the-badge	)
+![](https://komarev.com/ghpvc/?username=your-github-username&style=for-the-badge)
 
 <a href="https://github.com/ysoftman/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=ysoftman&show_icons=true&theme=one_dark_pro" />
