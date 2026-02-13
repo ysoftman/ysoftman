@@ -36,5 +36,5 @@ jobs:
           # 최소 권한 원칙: 기본적으로 해당 워크플로우가 실행 중인 레포지토리에만 접근 권한이 한정됩니다. 다른 사람의 레포지토리를 건드릴 수 없습니다.
           # 자동 마스킹: 로그에 실수로 출력하더라도 GitHub이 자동으로 *** 처리합니다.
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: 'gh-space-shooter-game.gif'
+          output-path: 'github-space-shooter-game.gif'
           strategy: 'random'
