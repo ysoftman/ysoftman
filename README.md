@@ -16,14 +16,8 @@
 ![?username=your Github Username&style=for The Badge image](https://komarev.com/ghpvc/?username=your-github-username&style=for-the-badge)
 
 <!-- github-readme-stats vercel 공용 인스턴스 rate limit 문제로 로컬 SVG 사용 -->
-<!-- GitHub Actions(update_readme_stats.yaml)에서 주기적으로 SVG를 갱신 -->
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img height=200 align="center" src="github-readme-stats.svg" />
-</a>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img height=200 align="center" src="github-readme-top-langs.svg" />
-</a>
-
+![github-readme-stats.svg](github-readme-stats.svg)
+![github-readme-top-langs.svg](github-readme-top-langs.svg)
 ![my gh space shooter](github-space-shooter-game.gif)
 
 <picture>
