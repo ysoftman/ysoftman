@@ -24,7 +24,7 @@
   <img height=200 align="center" src="github-readme-top-langs.svg" />
 </a>
 
-![my gh space shooter](gh-space-shooter-game.gif)
+![my gh space shooter](github-space-shooter-game.gif)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="github-contribution-grid-snake-dark.svg" />
