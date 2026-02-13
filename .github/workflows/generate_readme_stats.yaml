@@ -1,4 +1,4 @@
-name: Update GitHub readme stats SVG
+name: generate github readme stats svg
 
 on:
   # run automatically every 24 hours
@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-stats:
+  generate-github-stats-card:
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add github-readme-stats.svg github-readme-top-langs.svg
-          git diff --cached --quiet || git commit -m "Update GitHub readme stats SVG"
+          git diff --cached --quiet || git commit -m "update github readme stats svg"
           # 다른 워크플로우가 먼저 push한 경우를 대비해 rebase
           git pull --rebase
           git push

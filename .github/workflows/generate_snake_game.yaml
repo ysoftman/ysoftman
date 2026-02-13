@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate:
+  generate-snake-game-animation:
     permissions:
       contents: write
     runs-on: ubuntu-latest
