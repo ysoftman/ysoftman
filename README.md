@@ -12,11 +12,11 @@
 <a href="https://www.linkedin.com/in/byounghoon-yoon-a98515b5" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 ![?username=your Github Username&style=for The Badge image](https://komarev.com/ghpvc/?username=your-github-username&style=for-the-badge)
 
-<a href="https://github.com/ysoftman/github-readme-stats">
+<a href="https://github.com/anuraghazra/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=ysoftman&show_icons=true&theme=one_dark_pro" />
 </a>
-<a href="https://github.com/ysoftman/convoychat">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=one_dark_pro&langs_count=8&card_width=320" />
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ysoftman&layout=compact&theme=one_dark_pro&langs_count=8&card_width=320" />
 </a>
 
 <!--
