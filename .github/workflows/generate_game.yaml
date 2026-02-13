@@ -1,12 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: generate space shooter game
+name: generate game
 
 # Controls when the workflow will run
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
   schedule:
     - cron: '0 0 * * *'  # Daily at midnight UTC
@@ -14,6 +12,8 @@ on:
   workflow_dispatch:
 
 # 같은 concurrency 그룹의 워크플로우는 동시에 실행되지 않고 순차 대기하여 push 충돌 방지
+# concurrency group당 실행 1개 + 대기 1개 = 최대 2개다. 3번째가 있다면 취소된다.
+# 그래서 그룹(워크플로 파일)은 2개만 사용하고, jobs 내에서 순차적으로 실행할 수 있도록 한다.
 concurrency:
   group: commit-to-main
   cancel-in-progress: false
@@ -23,8 +23,36 @@ permissions:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  generate-space-shooter-game:
+  generate-snake-game-animation:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            github-contribution-grid-snake.svg
+            github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: commit and push snake svg
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
+          git diff --cached --quiet || git commit -m "Update snake game SVG"
+          # 다른 워크플로우가 먼저 push한 경우를 대비해 rebase
+          git pull --rebase
+          git push
+
+  generate-space-shooter-game:
+    needs: generate-snake-game-animation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
@@ -38,3 +66,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'github-space-shooter-game.gif'
           strategy: 'random'
+
