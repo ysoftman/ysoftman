@@ -4,7 +4,6 @@ name: Update Space Shooter Game
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
@@ -13,6 +12,11 @@ on:
     - cron: '0 0 * * *'  # Daily at midnight UTC
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+# 같은 concurrency 그룹의 워크플로우는 동시에 실행되지 않고 순차 대기하여 push 충돌 방지
+concurrency:
+  group: commit-to-main
+  cancel-in-progress: false
 
 permissions:
   contents: write
