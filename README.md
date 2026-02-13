@@ -35,3 +35,9 @@ Here are some ideas to get you started:
 -->
 
 ![my gh space shooter](gh-space-shooter-game.gif)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake animation" src="github-contribution-grid-snake.svg" />
+</picture>
