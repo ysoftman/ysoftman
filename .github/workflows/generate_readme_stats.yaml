@@ -41,6 +41,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&theme=one_dark_pro
           path: github-readme-stats.svg
+          # GitHub API에서 사용자 통계 데이터를 조회하기 위해 필요 (인증 없이는 rate limit 60회/시간)
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: generate top languages card
@@ -49,6 +50,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&theme=one_dark_pro&langs_count=8&card_width=320
           path: github-readme-top-langs.svg
+          # GitHub API에서 사용자 통계 데이터를 조회하기 위해 필요 (인증 없이는 rate limit 60회/시간)
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: commit and push stats SVGs
