@@ -62,7 +62,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      # 기본 checkout은 워크플로우 트리거 커밋(github.sha)을 체크아웃하므로,
+      # 앞서 실행된 snake job이 push한 커밋이 포함되지 않아 push 충돌이 발생한다.
+      # ref: main으로 job 실행 시점의 최신 main을 체크아웃하여 충돌을 방지한다.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: czl9707/gh-space-shooter@v1
         with:
