@@ -12,6 +12,10 @@ on:
   push:
     branches:
       - main
+    # workflow 내에서 다음 파일들 push 로 다시 워크플로우가 트리거 되지 않도록 한다.
+    paths-ignore:
+      - 'github-readme-stats.svg'
+      - 'github-readme-top-langs.svg'
 
 # 같은 concurrency 그룹의 워크플로우는 동시에 실행되지 않고 순차 대기하여 push 충돌 방지
 # concurrency group당 실행 1개 + 대기 1개 = 최대 2개다. 3번째가 있다면 취소된다.
@@ -52,7 +56,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add github-readme-stats.svg github-readme-top-langs.svg
-          git diff --cached --quiet || git commit -m "update github readme stats svg"
-          # 다른 워크플로우가 먼저 push한 경우를 대비해 rebase
-          git pull --rebase
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "update github readme stats svg"
+            git pull --rebase || true
+            git push || echo "Push failed, continuing..."
+          fi

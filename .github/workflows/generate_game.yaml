@@ -6,6 +6,11 @@ name: generate game
 on:
   push:
     branches: [ "main" ]
+    # workflow 내에서 다음 파일들 push 로 다시 워크플로우가 트리거 되지 않도록 한다.
+    paths-ignore:
+      - 'github-space-shooter-game.gif'
+      - 'github-contribution-grid-snake.svg'
+      - 'github-contribution-grid-snake-dark.svg'
   schedule:
     - cron: '0 0 * * *'  # Daily at midnight UTC
   # Allows you to run this workflow manually from the Actions tab
@@ -44,10 +49,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
-          git diff --cached --quiet || git commit -m "Update snake game SVG"
-          # 다른 워크플로우가 먼저 push한 경우를 대비해 rebase
-          git pull --rebase
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update snake game SVG"
+            git pull --rebase || true
+            git push || echo "Push failed, continuing..."
+          fi
 
   generate-space-shooter-game:
     needs: generate-snake-game-animation
@@ -58,12 +66,20 @@ jobs:
 
       - uses: czl9707/gh-space-shooter@v1
         with:
-          # secrets.GITHUB_TOKEN은 GitHub Actions가 실행될 때마다 GitHub에서 자동으로 생성하여 제공하는 특별한 비밀번호입니다.
-          # 따라서 사용자가 직접 Settings > Secrets에 등록할 필요가 전혀 없으며, 워크플로우 파일 내에서 즉시 호출해서 사용할 수 있습니다.
-          # 일회용 성격: 워크플로우의 Job이 시작될 때 생성되고, Job이 완료되면 즉시 만료됩니다.
-          # 최소 권한 원칙: 기본적으로 해당 워크플로우가 실행 중인 레포지토리에만 접근 권한이 한정됩니다. 다른 사람의 레포지토리를 건드릴 수 없습니다.
-          # 자동 마스킹: 로그에 실수로 출력하더라도 GitHub이 자동으로 *** 처리합니다.
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'github-space-shooter-game.gif'
           strategy: 'random'
+
+      - name: commit and push space shooter game gif
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-space-shooter-game.gif
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update space shooter game GIF"
+            git pull --rebase || true
+            git push || echo "Push failed, continuing..."
+          fi
 
