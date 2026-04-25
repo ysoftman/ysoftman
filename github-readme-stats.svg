@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Byoung Hoon, Yoon's GitHub Stats, Rank: B</title>
-        <desc id="descId">Total Stars Earned: 27, Total Commits  (last year) : 1926, Total PRs: 25, Total Issues: 24, Contributed to (last year): 6</desc>
+        <desc id="descId">Total Stars Earned: 27, Total Commits  (last year) : 1929, Total PRs: 25, Total Issues: 24, Contributed to (last year): 6</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 128.8798582818218;
+        stroke-dashoffset: 128.87819427423614;
       }
     }
   
